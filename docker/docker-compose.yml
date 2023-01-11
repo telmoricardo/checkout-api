@@ -1,0 +1,21 @@
+version: '3.7'
+
+services:
+  database-checkout:
+    image: postgres:latest
+    environment:
+      POSTGRESS_PASSWORD: admin
+      POSTGRESS_USER: admin
+      POSTGRESS_DB: checkout
+    container_name: db-checkout
+    ports:
+    - 5432:5432
+  database-payment:
+    image: postgres:latest
+    environment:
+      POSTGRES_PASSWORD: admin
+      POSTGRES_USER: admin
+      POSTGRES_DB: payment
+    container_name: db-payment
+    ports:
+      - 5433:5432
