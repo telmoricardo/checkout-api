@@ -24,6 +24,7 @@ public class CheckoutResource {
         final CheckoutResponse response = CheckoutResponse.builder()
                 .code(checkout.getCode())
                 .build();
+
         return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
 }
